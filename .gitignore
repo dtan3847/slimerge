@@ -1,0 +1,13 @@
+# pygame
+*.wav
+*.mp3
+*.pyc
+*.egg-info
+*-pygbag.???
+/build
+/dist
+
+# working
+/.vscode
+*~
+resources-working
