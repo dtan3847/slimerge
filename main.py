@@ -29,7 +29,7 @@ SUBMIT_TEXT = FONT.render("Submit", True, "black")
 
 # Create the window
 screen = pygame.display.set_mode(WINDOW_SIZE)
-pygame.display.set_caption('Merge Game')
+pygame.display.set_caption('Slimerge')
 
 def main():
     # Grid representation
