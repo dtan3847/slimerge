@@ -122,7 +122,7 @@ def main():
             "C": 20,
             "G": 0,
         }
-        return base_scores[item[0]] * math.ceil(2.4 ** (item[1] - 1))  # Exponential scoring for levels
+        return math.ceil(base_scores[item[0]] * 2.4 ** (item[1] - 1))  # Exponential scoring for levels
 
     def spawn_item_if_space(level):
         # Find a random empty cell
@@ -278,10 +278,6 @@ def main():
                 win_text = FONT.render("YOU WIN!", True, (0, 128, 0))
                 win_rect = win_text.get_rect(center=(CELL_SIZE * GRID_WIDTH // 2, CELL_SIZE * GRID_HEIGHT // 2))
                 screen.blit(win_text, win_rect)
-                pygame.display.flip()
-                await asyncio.sleep(0)
-                pygame.time.wait(3000)
-                running = False
                     
             if dragging and hide_dragged_item:
                 mouse_x, mouse_y = pygame.mouse.get_pos()
